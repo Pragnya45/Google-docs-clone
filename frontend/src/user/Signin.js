@@ -61,7 +61,7 @@ const Signin = () => {
 
   const errorMessage = () => {
     return (
-      <div className="row">
+      <div className="main">
         <div className="col-md-6 offset-sm-3 text-left">
           <div
             className="alert alert-danger"
