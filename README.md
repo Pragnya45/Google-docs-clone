@@ -1,4 +1,9 @@
 
+
+
+
+
+
 # Minimal Google_Docs_Clone
 
 The project includes an autosave functionality that automatically saves the title and content in real-time as you type.
