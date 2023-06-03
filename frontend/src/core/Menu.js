@@ -16,11 +16,11 @@ const Menu = ({ history }) => {
 
   return (
     <div>
-      <ul className="nav nav-tabs bg-off-white">
+      <ul className="nav nav-tabs bg-secondary">
         <li className="nav-item">
           <Link
             style={currentTab(history, "/")}
-            className="nav-link text-secondary"
+            className="nav-link text-black bg-secondary"
             to="/"
           >
             Home
@@ -32,7 +32,7 @@ const Menu = ({ history }) => {
             <li className="nav-item">
               <Link
                 style={currentTab(history, "/signup")}
-                className="nav-link text-secondary"
+                className="nav-link text-black bg-secondary"
                 to="/signup"
               >
                 Signup
@@ -41,7 +41,7 @@ const Menu = ({ history }) => {
             <li className="nav-item">
               <Link
                 style={currentTab(history, "/signin")}
-                className="nav-link text-secondary"
+                className="nav-link text-black bg-secondary"
                 to="/signin"
               >
                 SignIn
@@ -55,7 +55,7 @@ const Menu = ({ history }) => {
             className="nav-item ml-auto"
           >
             <Link
-              className="nav-link text-danger"
+              className="nav-link text-dark"
               onClick={() => {
                 signout(() => {
                   navigate("/");

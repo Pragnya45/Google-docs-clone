@@ -76,31 +76,43 @@ const Signin = () => {
 
   const signInForm = () => {
     return (
-      <div className="row">
-        <div className="col-md-6 offset-sm-3 text-left">
-          <form>
-            <div className="form-group">
-              <label className="text-dark">Email</label>
+      <div className="main">
+        <div class="register">
+        <h2> Signin  Here</h2>
+        <form id="register" method="post">
+        <div className="form-group">
+              <label className="text">Email</label>
+              <br/>
               <input
+                className="email"
                 onChange={handleChange("email")}
-                value={email}
-                className="form-control"
                 type="email"
+                value={email}
+                id="name"
+                placeholder="Enter your email"
               />
-            </div>
+              <br/>
+              <br/>
 
             <div className="form-group">
-              <label className="text-dark">Password</label>
+              <label className="text">Password</label>
+              <br/>
               <input
+                className="password"
                 onChange={handleChange("password")}
-                value={password}
-                className="form-control"
                 type="password"
+                value={password}
+                placeholder="Enter your password"
+                id="name"
               />
             </div>
-            <button onClick={onSubmit} className="btn btn-success btn-block">
-              Submit
+            <br></br>
+            
+            <button className="submit" onClick={onSubmit} type="submit" id="submit" value="Submit">
+             Submit
             </button>
+
+            </div>
           </form>
         </div>
       </div>

@@ -1,6 +1,6 @@
 .btn,
 .jumbotron,
-.nav :hover {
+.nav:hover {
   border-radius: 0px;
 }
 
@@ -60,8 +60,88 @@ footer {
   border-radius: 20px;
 }
 
-.main{
+* {
+  margin: 0;
+  
+  background-size: 280%;
+  background-position: -400px 0px;
+}
+
+div.main{
+  width:400px;
+  margin:60px auto 0px auto;
+}
+h2{
   text-align:center;
-  justify-content:center;
-  display
+  padding:20px;
+  font-family: sans-serif;
+}
+div.register{
+  background-color:rgba(0,0,0,0.5);
+  width:100%;
+  font-size: 18px;
+  border-radius:10px;
+  border:1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:2px 2px 15px 2px;
+  color:#2a2828;
+}
+
+form#register{
+  margin:35px  40px;
+}
+label{
+  font-family:sans-serif;
+  font-size:18px;
+  font-style:Arial;
+}
+input#name{
+  width:300px;
+  border:1px solid #ddd;
+  border-radius:7px;
+  outline: 0;
+  padding:7px;
+  background-color: #fff;
+  box-shadow: inset 1px 1px 5px rgba(0,0,0.3);
+}
+button#submit {
+  width: 150px;
+  height: 35px;
+  padding: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 3px;
+  background-color: rgba(57, 69, 82, 0.8);
+  color: #1f1a1a;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+label,span,h2{
+  text-shadow:1px 1px 5px rgba(0,0,0,0.3);
+}
+
+/* Updated code with hover effects */
+
+.btn:hover,
+.jumbotron:hover,
+.nav:hover {
+  border-radius: 5px;
+  background-color: #ccc;
+}
+
+.new-doc-button button:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+.blog-title:hover {
+  text-decoration: underline;
+}
+
+button#submit:hover {
+  background-color: rgba(57, 69, 82, 1);
+  
 }

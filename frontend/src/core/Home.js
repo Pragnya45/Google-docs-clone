@@ -83,7 +83,7 @@ const Home = () => {
       </div>
       <div className="new-doc-button">
         <button
-          className="btn btn-primary btn-lg"
+          className="btn btn-primary btn-lg bg-secondary text-dark"
           onClick={handleNewDoc} // Modified onClick event handler
         >
           {isLoading ? (

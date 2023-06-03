@@ -43,38 +43,54 @@ const Signup = () => {
 
   const signUpForm = () => {
     return (
-      <div className="row">
-        <div class="col-md-6.offset-sm-3 text-left">
-          <form>
+      <div className="main">
+        <div class="register">
+          <h2> Signup  Here</h2>
+          <form id="register" method="post">
+            
             <div className="form-group">
-              <label className="text-dark">Name</label>
+              <label className="text">Name</label>
+              <br/>
               <input
-                className="form-control"
+                className="fname"
                 onChange={handleChange("name")}
                 type="text"
                 value={name}
+                placeholder="Enter your name"
+                id="name"
               />
+              <br/>
+              <br/>
             </div>
             <div className="form-group">
-              <label className="text-dark">Email</label>
+              <label className="text">Email</label>
+              <br/>
               <input
-                className="form-control"
+                className="email"
                 onChange={handleChange("email")}
                 type="email"
                 value={email}
+                id="name"
+                placeholder="Enter your email"
               />
+              <br/>
+              <br/>
             </div>
             <div className="form-group">
-              <label className="text-dark">Password</label>
+              <label className="text">Password</label>
+              <br/>
               <input
-                className="form-control"
+                className="password"
                 onChange={handleChange("password")}
                 type="password"
                 value={password}
+                placeholder="Enter your password"
+                id="name"
               />
             </div>
             <br></br>
-            <button onClick={onSubmit} className="btn btn-success btn-block ">
+            <br/>
+            <button onClick={onSubmit} className="submit" type="submit" id="submit" value="Submit" >
               Submit
             </button>
           </form>
