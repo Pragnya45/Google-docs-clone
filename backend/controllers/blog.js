@@ -28,7 +28,6 @@ exports.getBlogsByBlogId = async (req, res) => {
 };
 
 exports.createBlog = async (req, res) => {
-  console.log("Create blog is triggered");
   const blog = new Blog(req.body);
 
   Blog.create(blog)

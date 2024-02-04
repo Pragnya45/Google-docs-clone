@@ -11,10 +11,10 @@ const truncateText = (text, maxLength) => {
 };
 
 const Blogcard = ({
-  blogId = "123456",
-  userId = "123456",
-  title = "Card Title",
-  content = "Some quick example text to build on the card title and make up the bulk of the card's content...",
+  blogId,
+  userId,
+  title,
+  content,
   maxLength = 50, // Maximum number of characters to show
   updateBlog,
 }) => {

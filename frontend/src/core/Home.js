@@ -15,7 +15,6 @@ const Home = () => {
   const [blogs, setBlogs] = useState([]);
   const [error, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(false); // Track loading state
-
   useEffect(() => {
     loadAllBlogs();
   }, []);
@@ -23,7 +22,6 @@ const Home = () => {
   const loadAllBlogs = async () => {
     try {
       const data = await getBlogsByUserId(user._id, token);
-      console.log(data);
       if (data.error) {
         console.log(data.error);
         setError(data.error);

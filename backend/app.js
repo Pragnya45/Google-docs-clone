@@ -1,3 +1,4 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
@@ -11,13 +12,9 @@ const userRoutes = require("./routes/user");
 const blogRoutes = require("./routes/blog");
 
 //DB Connections
-mongoose
-  .connect(
-    "mongodb+srv://pragnya110:hmfhvdYgha4B0BCN@cluster0.puarjpd.mongodb.net/autosaveblog"
-  )
-  .then(() => {
-    console.log("DB CONNECTED");
-  });
+mongoose.connect(process.env.DATABASE).then(() => {
+  console.log("DB CONNECTED");
+});
 
 //Middlewares
 app.use(bodyParser.json());

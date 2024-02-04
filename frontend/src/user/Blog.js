@@ -66,7 +66,6 @@ const Blog = () => {
     }, 2000);
     setAutosaveTimer(newAutoSaveTimer);
   };
-
   const handleContentChange = (event) => {
     const newContent = event.target.value;
     setContent(newContent);
