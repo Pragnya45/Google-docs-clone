@@ -15,12 +15,35 @@ const blogRoutes = require("./routes/blog");
 mongoose.connect(process.env.DATABASE).then(() => {
   console.log("DB CONNECTED");
 });
-
+// const corsOptions = {
+//   origin: "*", // Allow requests from this origin
+//   methods: ["GET", "POST", "PUT", "DELETE"], // Allow these HTTP methods
+//   allowedHeaders: ["Content-Type", "Authorization"], // Allow these headers
+// };
 //Middlewares
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(cors());
 
+app.use(function (req, res, next) {
+  // res.header("Access-Control-Allow-Origin", "*");
+  const allowedOrigins = ["http://localhost:3000"];
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  }
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  );
+  res.header("Access-Control-Allow-credentials", true);
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, UPDATE");
+  next();
+});
+app.use(
+  cors({
+    origin: true,
+  })
+);
 //My Routes
 app.use("/api", authRoutes);
 app.use("/api", userRoutes); ///middileware to handel it
